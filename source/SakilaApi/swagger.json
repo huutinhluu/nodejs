@@ -1,0 +1,251 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Sakila",
+        "description": "Node JS APP",
+        "version": "1.0.0"
+    },
+    "produces": [
+        "application/json"
+    ],
+    "host": "localhost:3000",
+    "basePath": "/",
+    "paths": {
+        "/api/actors":{
+            "get": {
+                "tags": ["Actor"],
+                "description": "get all actor",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "post":{
+                "tags": ["Actor"],
+                "description":"add new actor",
+                "parameters":[
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "actor",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/actor"
+                        }
+                    }
+                    
+                ],
+                "responses": {
+                    "200": {
+                        "description": "add new actor success"
+                    }
+                }
+            }
+        },
+        "/api/actors/{id}": {
+            "get": {
+                "tags": ["Actor"],
+                "description": "get actor",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type":"integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "get Successfully"
+                    }
+                }
+            },
+            "put": {
+                "tags": ["Actor"],
+                "description": "update actor",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type":"integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "actor",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/actor"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "update Successfully"
+                    }
+                }
+            },
+            "delete": {
+                "tags": ["Actor"],
+                "description": "delete actor",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type":"integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "delete Successfully"
+                    }
+                }
+            }
+        },
+        "/api/films":{
+            "get": {
+                "tags": ["Film"],
+                "description": "get all film",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "post":{
+                "tags": ["Film"],
+                "description":"add new film",
+                "parameters":[
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "film",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/film"
+                        }
+                    }
+                    
+                ],
+                "responses": {
+                    "200": {
+                        "description": "add new film success"
+                    }
+                }
+            }
+        },
+        "/api/films/{id}": {
+            "get": {
+                "tags": ["Film"],
+                "description": "get film",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type":"integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "get Successfully"
+                    }
+                }
+            },
+            "put": {
+                "tags": ["Film"],
+                "description": "update film",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type":"integer"
+                    },
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "description": "film",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/film"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "update Successfully"
+                    }
+                }
+            },
+            "delete": {
+                "tags": ["Film"],
+                "description": "delete film",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type":"integer"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "delete Successfully"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "actor": {
+            "type": "object",
+            "required": [
+                "first_name", "last_name"
+            ],
+            "properties": {
+                "first_name": {
+                    "type": "string"
+                },
+                "last_name": {
+                    "type": "string"
+                }
+            }
+        },
+        "film": {
+            "type": "object",
+            "required": [
+                "title", "language_id"
+            ],
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "language_id": {
+                    "type": "integer"
+                },
+                "release_year": {
+                    "type": "integer"
+                },
+                "original_language_id": {
+                    "type": "integer"
+                },
+                "rental_duration": {
+                    "type": "integer"
+                },
+                "rental_rate": {
+                    "type": "number"
+                },
+                "length": {
+                    "type": "integer"
+                }
+            }
+        }
+    }
+}

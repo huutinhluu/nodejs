@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Film Detail</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+            integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+    </head>
+    <style>
+        .img-thumbnail {
+            height: 700px;
+        }
+        .container {
+            margin: 20px;
+        }
+        .row {
+            display: flex;
+        }
+        .detail {
+            margin: 0 15px;
+        }
+        .button-list {
+            display: flex;
+        }
+        .feature-button {
+            margin: 0 10px;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <h3>
+                <a href="index.html">&larr; Return Home</a>
+            </h3>
+            <div class="row">
+                <div class="col">
+                    <img
+                        src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/movie-poster-template-design-21a1c803fe4ff4b858de24f5c91ec57f_screen.jpg?ts=1636996180"
+                        alt="Film Poster"
+                        class="img-thumbnail"
+                    />
+                </div>
+                <div class="col detail">
+                    <div id="content"></div>
+                </div>
+            </div>
+
+            <br />
+            <h1>Actors</h1>
+
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                        </tr>
+                    </thead>
+                    <tbody id="actor-container"></tbody>
+                </table>
+            </div>
+
+            <div
+                id="delete-film-modal"
+                class="modal fade"
+                tabindex="-1"
+                role="dialog"
+            >
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Update Film</h5>
+                            <button
+                                type="button"
+                                class="close"
+                                data-dismiss="modal"
+                                aria-label="Close"
+                            >
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure to delete this film
+                        </div>
+                        <div class="modal-footer">
+                            <button
+                                type="button"
+                                class="btn btn-danger"
+                                id="feature-button-delete"
+                            >
+                                Delete
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-dismiss="modal"
+                            >
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                id="update-film-modal"
+                class="modal fade"
+                tabindex="-1"
+                role="dialog"
+            >
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Update</h5>
+                            <button
+                                type="button"
+                                class="close"
+                                data-dismiss="modal"
+                                aria-label="Close"
+                            >
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="card-body">
+                                <form id="frmMain">
+                                    <div class="form-group">
+                                        <label for="txtTitle">Title</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="txtTitle"
+                                            autofocus
+                                        />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtDescription"
+                                            >Description</label
+                                        >
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="txtDescription"
+                                        />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtYear"
+                                            >Release Year</label
+                                        >
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="txtYear"
+                                        />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtLanguageId"
+                                            >Language Id</label
+                                        >
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="txtLanguageId"
+                                        />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtFilmLength"
+                                            >Film Length</label
+                                        >
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="txtFilmLength"
+                                        />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtReplacementCost"
+                                            >Replacement Cost</label
+                                        >
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="txtReplacementCost"
+                                        />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtRentalDuration"
+                                            >Rental Duration</label
+                                        >
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="txtRentalDuration"
+                                        />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button
+                                type="button"
+                                class="btn btn-primary"
+                                id="feature-button-update"
+                            >
+                                Update
+                            </button>
+                            <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-dismiss="modal"
+                            >
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+        crossorigin="anonymous"
+    ></script>
+
+    <script>
+        const url = new URL(document.URL);
+        const id = url.searchParams.get('id');
+
+        $.ajax({
+            url: `http://localhost:3000/api/films/${id}`,
+            type: 'GET',
+        }).done(function (res) {
+            const film = res[0];
+
+            // Init update input.
+            document.getElementById('txtTitle').value = film.title;
+            document.getElementById('txtDescription').value = film.description;
+            document.getElementById('txtYear').value = film.release_year;
+            document.getElementById('txtFilmLength').value = film.length;
+            document.getElementById('txtReplacementCost').value =
+                film.replacement_cost;
+            document.getElementById('txtLanguageId').value = film.language_id;
+            document.getElementById('txtRentalDuration').value =
+                film.rental_duration;
+
+            const feature_items = film.special_features.split(',');
+
+            let buttons = '';
+            for (const text of feature_items) {
+                switch (text) {
+                    case 'Trailers': {
+                        buttons += `<button
+                                    type='button'
+                                    class='btn btn-primary'>
+                                    ${text}
+                                </button>`;
+                        break;
+                    }
+                    case 'Commentaries': {
+                        buttons += `<button
+                                    type='button'
+                                    class='btn btn-secondary feature-button'>
+                                    ${text}
+                                </button>`;
+                        break;
+                    }
+                    case 'Behind the Scenes': {
+                        buttons += `<button
+                                    type='button'
+                                    class='btn btn-info feature-button'>
+                                    ${text}
+                                </button>`;
+                        break;
+                    }
+                }
+            }
+            const featureButtonList = `
+                    <div class="button-list">
+                        <button
+                            type='button'
+                            class='btn btn-info feature-button'
+                            data-toggle="modal"
+                            data-target="#update-film-modal" >
+                            Update
+                        </button>
+                        <button
+                                    type='button'
+                                    class='btn btn-danger feature-button'
+                                    data-toggle="modal"
+                                    data-target="#delete-film-modal" >
+                                    Delete
+                                </button>
+                        ${buttons}
+                    </div>
+                `;
+
+            $('#content').append(`<h1>${film.title}</h1><br/>`);
+            $('#content').append(
+                `<p><strong>Description:</strong> ${film.description}</p>`
+            );
+            $('#content').append(
+                `<p><strong>Release year:</strong> ${film.release_year}</p>`
+            );
+            $('#content').append(
+                `<p><strong>Film length:</strong> ${film.length} minutes</p>`
+            );
+            $('#content').append(
+                `<p><strong>Language id:</strong> ${film.language_id}</p>`
+            );
+            $('#content').append(
+                `<p><strong>Replacement cost:</strong> ${film.replacement_cost} USD</p>`
+            );
+            $('#content').append(
+                `<p><strong>Rental duration:</strong> ${film.rental_duration}</p>`
+            );
+            $('#content').append(
+                `<p><strong>Rental rate:</strong> ${film.rental_rate} &#11088;</p>`
+            );
+            $('#content').append(
+                `<p><strong>Age limit:</strong> ${film.rating}</p>`
+            );
+            $('#content').append(featureButtonList);
+        });
+
+        $.ajax({
+            url: `http://localhost:3000/api/actors`,
+            type: 'GET',
+        }).done(function (res) {
+            for (const actor of res) {
+                const tr = `<tr>
+                            <td>${actor.actor_id}</td>
+                            <td>${actor.first_name}</td>
+                            <td>${actor.last_name}</td>
+                        </tr>`;
+                $('#actor-container').append(tr);
+            }
+        });
+
+        $('#feature-button-update').on('click', function () {
+            const input = {};
+
+            if ($('#txtTitle').val().length !== 0) {
+                if (
+                    $('#txtTitle').val() !== $('#txtTitle').val().toUpperCase()
+                ) {
+                    alert('Title field must be all uppercase letter');
+                    return;
+                }
+
+                if (
+                    /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(
+                        $('#txtTitle').val()
+                    )
+                ) {
+                    alert('Title cannot have special characters');
+                    return;
+                }
+
+                input['title'] = $('#txtTitle').val();
+            }
+
+            if ($('#txtDescription').val().length !== 0) {
+                if (
+                    $('#txtDescription').val()[0] !==
+                    $('#txtDescription').val()[0].toUpperCase()
+                ) {
+                    alert(
+                        'First letter of Description must be all uppercase letter'
+                    );
+                    return;
+                }
+
+                if (
+                    /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(
+                        $('#txtDescription').val()
+                    )
+                ) {
+                    alert('Description cannot have special characters');
+                    return;
+                }
+
+                input['description'] = $('#txtDescription').val();
+            }
+
+            if ($('#txtFilmLength').val().length !== 0) {
+                if (+$('#txtFilmLength').val() < 30) {
+                    alert('Film Length must >= 30');
+                    return;
+                }
+
+                input['length'] = +$('#txtFilmLength').val();
+            }
+
+            if ($('#txtLanguageId').val().length !== 0) {
+                input['language_id'] = +$('#txtLanguageId').val();
+            }
+
+            if ($('#txtReplacementCost').val().length !== 0) {
+                input['replacement_cost'] = +$('#txtReplacementCost').val();
+            }
+
+            if ($('#txtRentalDuration').val().length !== 0) {
+                if (
+                    +$('#txtRentalDuration').val() < 3 ||
+                    +$('#txtRentalDuration').val() > 7
+                ) {
+                    alert('Rental Duration must between 3 to 7');
+                    return;
+                }
+
+                input['rental_duration'] = +$('#txtRentalDuration').val();
+            }
+
+            if ($('#txtYear').val().length !== 0) {
+                if (+$('#txtReleaseYear').val() < 1900) {
+                    alert('Release year must >= 1900');
+                    return;
+                }
+                input['release_year'] = +$('#txtYear').val();
+            }
+
+            $.ajax({
+                url: `http://localhost:3000/api/films/${id}`,
+                dataType: 'JSON',
+                data: JSON.stringify(input),
+                contentType: 'application/json',
+                type: 'PUT',
+                success: (data) => {
+                    alert('Update successfully');
+                    location.reload();
+                },
+                error: (error) => {
+                    alert('Update failed: ', error.message);
+                },
+            }).done(function (res) {});
+        });
+
+        $('#feature-button-delete').on('click', function () {
+            $.ajax({
+                url: `http://localhost:3000/api/films/${id}`,
+                type: 'DELETE',
+                success: (data) => {
+                    alert('Delete successfully');
+                    document.location = '/fe/index.html';
+                },
+                error: (error) => {
+                    alert('Delete Failed: ', error.message);
+                },
+            });
+        });
+    </script>
+</html>

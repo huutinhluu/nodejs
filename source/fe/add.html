@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Sakila Client</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+            integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <style>
+            .red-star {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <h4 class="card-header">Film Information</h4>
+                        <div class="card-body">
+                            <form id="frmMain">
+                                <div class="form-group">
+                                    <label for="txtTitle"
+                                        >Title
+                                        <span class="red-star">★</span></label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="txtTitle"
+                                        autofocus
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label for="txtLanguageId"
+                                        >Language Id
+                                        <span class="red-star">★</span></label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="txtLanguageId"
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label for="txtDescription"
+                                        >Description</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="txtDescription"
+                                        autofocus
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label for="txtReleaseYear"
+                                        >Release Year</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="txtReleaseYear"
+                                        autofocus
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label for="txtFilmLength">Length</label>
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="txtFilmLength"
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label for="txtRentalDuration"
+                                        >Rental Duration</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="txtRentalDuration"
+                                        autofocus
+                                    />
+                                </div>
+                                <div class="form-group">
+                                    <label for="txtRentalRate"
+                                        >Rental Rate</label
+                                    >
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="txtRentalRate"
+                                        autofocus
+                                    />
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                    <i
+                                        class="fa fa-check"
+                                        aria-hidden="true"
+                                    ></i>
+                                    Save
+                                </button>
+                            </form>
+                        </div>
+                        <div class="card-footer text-muted">Footer</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+            integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            $('#frmMain').on('submit', function (e) {
+                e.preventDefault();
+
+                if ($('#txtTitle').val().length === 0) {
+                    alert('Title field is Empty');
+                    return;
+                }
+
+                if ($('#txtLanguageId').val().length == 0) {
+                    alert('Language Id field is Empty');
+                    return;
+                }
+
+                if (
+                    $('#txtTitle').val() !== $('#txtTitle').val().toUpperCase()
+                ) {
+                    alert('Title field must be all uppercase letter');
+                    return;
+                }
+
+                if (
+                    /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(
+                        $('#txtTitle').val()
+                    )
+                ) {
+                    alert('Title cannot have special characters');
+                    return;
+                }
+
+                const film = {
+                    title: $('#txtTitle').val(),
+                    language_id: +$('#txtLanguageId').val(),
+                };
+
+                if ($('#txtDescription').val().length !== 0) {
+                    if (
+                        $('#txtDescription').val()[0] !==
+                        $('#txtDescription').val()[0].toUpperCase()
+                    ) {
+                        alert(
+                            'First letter of Description must be all uppercase letter'
+                        );
+                        return;
+                    }
+
+                    if (
+                        /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(
+                            $('#txtDescription').val()
+                        )
+                    ) {
+                        alert('Description cannot have special characters');
+                        return;
+                    }
+
+                    film['description'] = $('#txtDescription').val();
+                }
+
+                if ($('#txtReleaseYear').val().length !== 0) {
+                    if (+$('#txtReleaseYear').val() < 1900) {
+                        alert('Release year must >= 1900');
+                        return;
+                    }
+                    film['release_year'] = +$('#txtReleaseYear').val();
+                }
+
+                if ($('#txtRentalDuration').val().length !== 0) {
+                    if (
+                        +$('#txtRentalDuration').val() < 3 ||
+                        +$('#txtRentalDuration').val() > 7
+                    ) {
+                        alert('Rental Duration must between 3 to 7');
+                        return;
+                    }
+                    film['rental_duration'] = +$('#txtRentalDuration').val();
+                }
+
+                if ($('#txtRentalRate').val().length !== 0) {
+                    if (
+                        +$('#txtRentalRate').val() < 0.99 ||
+                        +$('#txtRentalRate').val() > 4.99
+                    ) {
+                        alert('Rental Rate must between 0.99 to 4.99');
+                        return;
+                    }
+                    film['rental_rate'] = +$('#txtRentalRate').val();
+                }
+
+                if ($('#txtFilmLength').val().length !== 0) {
+                    if (+$('#txtFilmLength').val() < 30) {
+                        alert('Film Length must >= 30');
+                        return;
+                    }
+                    film['length'] = +$('#txtFilmLength').val();
+                }
+
+                const jsonToPost = JSON.stringify(film);
+
+                $.ajax({
+                    url: 'http://localhost:3000/api/films',
+                    type: 'POST',
+                    data: jsonToPost,
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    success: (data) => {
+                        alert('Film added!');
+                        document.location = '/fe/index.html';
+                    },
+                    error: (error) => {
+                        alert('Add Film failed: ', error.message);
+                    },
+                });
+            });
+        </script>
+    </body>
+</html>

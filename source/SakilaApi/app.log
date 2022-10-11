@@ -1,0 +1,226 @@
+[2022-10-09T22:43:06.397] [DEBUG] default - App listening on port 3000
+[2022-10-09T22:47:10.668] [DEBUG] default - App listening on port 3000
+[2022-10-09T22:47:16.151] [DEBUG] default - IN - get all actor
+[2022-10-09T22:47:16.197] [DEBUG] default - Number actor get all: 204
+[2022-10-09T22:47:16.198] [DEBUG] default - OUT - get all actor
+[2022-10-09T22:47:19.151] [DEBUG] default - IN - add new actor
+[2022-10-09T22:47:19.152] [DEBUG] default - actorData: {"first_name":"TINH","last_name":"LUU"}
+[2022-10-09T22:47:19.160] [DEBUG] default - OUT - actorInserted:  [{"actor_id":207,"first_name":"TINH","last_name":"LUU","last_update":"2022-10-09T15:47:19.000Z"}]
+[2022-10-09T22:47:22.513] [DEBUG] default - IN - delete actor by id
+[2022-10-09T22:47:22.513] [DEBUG] default - actorID: 204
+[2022-10-09T22:47:22.515] [DEBUG] default - OUT - delete actor by id, result:  0
+[2022-10-09T22:47:27.864] [DEBUG] default - IN - delete actor by id
+[2022-10-09T22:47:27.865] [DEBUG] default - actorID: 205
+[2022-10-09T22:47:27.870] [DEBUG] default - OUT - delete actor by id, result:  1
+[2022-10-09T22:47:37.372] [DEBUG] default - IN - update actor
+[2022-10-09T22:47:37.372] [DEBUG] default - actorID: 201
+[2022-10-09T22:47:37.373] [DEBUG] default - actorData: {"first_name":"TINH UPDTESTATED","last_name":"LUU"}
+[2022-10-09T22:47:37.378] [DEBUG] default - result: 1
+[2022-10-09T22:47:41.583] [DEBUG] default - IN - get all films
+[2022-10-09T22:47:41.610] [DEBUG] default - Number films get all: undefined
+[2022-10-09T22:47:41.611] [DEBUG] default - OUT - get all actor
+[2022-10-09T22:47:45.803] [DEBUG] default - IN - add new film
+[2022-10-09T22:47:45.803] [DEBUG] default - filmData: {"title":"ACADEMY DINOSAUR TEST","description":"A Epic Drama of a Feminist And a Mad Scientist who must Battle a Teacher in The Canadian Rockies","release_year":2006,"language_id":1,"original_language_id":1}
+[2022-10-09T22:47:45.871] [DEBUG] default - OUT - result 1006
+[2022-10-09T22:47:49.286] [DEBUG] default - IN - update film by id
+[2022-10-09T22:47:49.286] [DEBUG] default - filmID: 1004
+[2022-10-09T22:47:49.287] [DEBUG] default - filmData: {"title":"ACADEMY DINOSAUR TEST TEST PUT","description":"A Epic Drama of a Feminist And a Mad Scientist who must Battle a Teacher in The Canadian Rockies","release_year":2006,"language_id":1,"original_language_id":1}
+[2022-10-09T22:47:49.291] [DEBUG] default - OUT - result 0
+[2022-10-09T22:47:56.331] [DEBUG] default - IN - update film by id
+[2022-10-09T22:47:56.332] [DEBUG] default - filmID: 1005
+[2022-10-09T22:47:56.332] [DEBUG] default - filmData: {"title":"ACADEMY DINOSAUR TEST TEST PUT","description":"A Epic Drama of a Feminist And a Mad Scientist who must Battle a Teacher in The Canadian Rockies","release_year":2006,"language_id":1,"original_language_id":1}
+[2022-10-09T22:47:56.343] [DEBUG] default - OUT - result 1
+[2022-10-09T22:48:00.928] [DEBUG] default - IN - delete film by id
+[2022-10-09T22:48:00.929] [DEBUG] default - filmID: 1005
+[2022-10-09T22:48:00.939] [DEBUG] default - OUT - result 1
+[2022-10-09T23:11:29.120] [DEBUG] default - App listening on port 3000
+[2022-10-09T23:11:36.666] [DEBUG] default - IN - delete film by id
+[2022-10-09T23:11:36.667] [DEBUG] default - filmID: 1005
+[2022-10-09T23:11:36.682] [DEBUG] default - OUT - result 0
+[2022-10-09T23:11:39.323] [DEBUG] default - IN - get all actor
+[2022-10-09T23:11:39.333] [DEBUG] default - Number actor get all: 204
+[2022-10-09T23:11:39.334] [DEBUG] default - OUT - get all actor
+[2022-10-09T23:11:41.908] [DEBUG] default - IN - add new actor
+[2022-10-09T23:11:41.909] [DEBUG] default - actorData: {"first_name":"TINH","last_name":"LUU"}
+[2022-10-09T23:11:41.919] [DEBUG] default - OUT - actorInserted:  [{"actor_id":208,"first_name":"TINH","last_name":"LUU","last_update":"2022-10-09T16:11:41.000Z"}]
+[2022-10-09T23:13:01.508] [DEBUG] default - App listening on port 3000
+[2022-10-09T23:13:05.655] [DEBUG] default - IN - add new actor
+[2022-10-09T23:13:05.656] [DEBUG] default - actorData: {"first_name":"TINH","last_name":"LUU"}
+[2022-10-09T23:13:05.666] [DEBUG] default - OUT - actorInserted:  [{"actor_id":209,"first_name":"TINH","last_name":"LUU","last_update":"2022-10-09T16:13:05.000Z"}]
+[2022-10-09T23:13:06.780] [DEBUG] default - IN - add new actor
+[2022-10-09T23:13:06.781] [DEBUG] default - actorData: {"first_name":"TINH","last_name":"LUU"}
+[2022-10-09T23:13:06.787] [DEBUG] default - OUT - actorInserted:  [{"actor_id":210,"first_name":"TINH","last_name":"LUU","last_update":"2022-10-09T16:13:06.000Z"}]
+[2022-10-09T23:13:07.924] [DEBUG] default - IN - add new actor
+[2022-10-09T23:13:07.924] [DEBUG] default - actorData: {"first_name":"TINH","last_name":"LUU"}
+[2022-10-09T23:13:07.931] [DEBUG] default - OUT - actorInserted:  [{"actor_id":211,"first_name":"TINH","last_name":"LUU","last_update":"2022-10-09T16:13:07.000Z"}]
+[2022-10-09T23:13:10.695] [DEBUG] default - IN - get all actor
+[2022-10-09T23:13:10.701] [DEBUG] default - Number actor get all: 208
+[2022-10-09T23:13:10.701] [DEBUG] default - OUT - get all actor
+[2022-10-09T23:19:37.686] [DEBUG] default - App listening on port 3000
+[2022-10-09T23:19:42.397] [DEBUG] default - IN - get all actor
+[2022-10-09T23:19:42.409] [DEBUG] default - Number actor get all: 208
+[2022-10-09T23:19:42.409] [DEBUG] default - OUT - get all actor
+[2022-10-09T23:19:43.511] [DEBUG] default - IN - get all actor
+[2022-10-09T23:19:43.515] [DEBUG] default - Number actor get all: 208
+[2022-10-09T23:19:43.515] [DEBUG] default - OUT - get all actor
+[2022-10-09T23:19:54.303] [DEBUG] default - IN - get all actor
+[2022-10-09T23:19:54.306] [DEBUG] default - Number actor get all: 208
+[2022-10-09T23:19:54.306] [DEBUG] default - OUT - get all actor
+[2022-10-09T23:19:55.357] [DEBUG] default - IN - get all actor
+[2022-10-09T23:19:55.360] [DEBUG] default - Number actor get all: 208
+[2022-10-09T23:19:55.361] [DEBUG] default - OUT - get all actor
+[2022-10-09T23:19:56.370] [DEBUG] default - IN - get all actor
+[2022-10-09T23:19:56.374] [DEBUG] default - Number actor get all: 208
+[2022-10-09T23:19:56.374] [DEBUG] default - OUT - get all actor
+[2022-10-09T23:25:29.737] [DEBUG] default - App listening on port 3000
+[2022-10-09T23:25:33.583] [DEBUG] default - IN - get all actor
+[2022-10-09T23:25:33.592] [DEBUG] default - Number actor get all: 208
+[2022-10-09T23:25:33.593] [DEBUG] default - OUT - get all actor
+[2022-10-09T23:25:36.720] [DEBUG] default - IN - add new actor
+[2022-10-09T23:25:36.721] [DEBUG] default - actorData: {"first_name":"TINH","last_name":"LUU"}
+[2022-10-09T23:25:36.730] [DEBUG] default - OUT - actorInserted:  [{"actor_id":212,"first_name":"TINH","last_name":"LUU","last_update":"2022-10-09T16:25:36.000Z"}]
+[2022-10-09T23:31:03.266] [DEBUG] default - App listening on port 3000
+[2022-10-09T23:31:07.471] [DEBUG] default - IN - add new actor
+[2022-10-09T23:31:07.472] [DEBUG] default - actorData: {"first_name":"TINH","last_name":"LUU"}
+[2022-10-09T23:31:07.487] [DEBUG] default - OUT - actorInserted:  [{"actor_id":213,"first_name":"TINH","last_name":"LUU","last_update":"2022-10-09T16:31:07.000Z"}]
+[2022-10-09T23:31:08.602] [DEBUG] default - IN - add new actor
+[2022-10-09T23:31:08.602] [DEBUG] default - actorData: {"first_name":"TINH","last_name":"LUU"}
+[2022-10-09T23:31:08.609] [DEBUG] default - OUT - actorInserted:  [{"actor_id":214,"first_name":"TINH","last_name":"LUU","last_update":"2022-10-09T16:31:08.000Z"}]
+[2022-10-09T23:31:11.193] [DEBUG] default - IN - get all actor
+[2022-10-09T23:31:11.198] [DEBUG] default - Number actor get all: 211
+[2022-10-09T23:31:11.199] [DEBUG] default - OUT - get all actor
+[2022-10-09T23:32:22.307] [DEBUG] default - App listening on port 3000
+[2022-10-09T23:32:24.215] [DEBUG] default - IN - get all actor
+[2022-10-09T23:32:24.226] [DEBUG] default - Number actor get all: 211
+[2022-10-09T23:32:24.227] [DEBUG] default - OUT - get all actor
+[2022-10-09T23:33:21.188] [DEBUG] default - App listening on port 3000
+[2022-10-09T23:33:22.768] [DEBUG] default - IN - get all actor
+[2022-10-09T23:33:22.779] [DEBUG] default - Number actor get all: 211
+[2022-10-09T23:33:22.780] [DEBUG] default - OUT - get all actor
+[2022-10-09T23:33:23.860] [DEBUG] default - IN - get all actor
+[2022-10-09T23:33:23.863] [DEBUG] default - Number actor get all: 211
+[2022-10-09T23:33:23.863] [DEBUG] default - OUT - get all actor
+[2022-10-09T23:41:03.255] [INFO] default - Server listens on 3001
+[2022-10-09T23:41:11.006] [DEBUG] default - IN - get all actor
+[2022-10-09T23:41:11.017] [DEBUG] default - Number actor get all: 211
+[2022-10-09T23:41:11.018] [DEBUG] default - OUT - get all actor
+[2022-10-09T23:41:21.392] [DEBUG] default - IN - get all actor
+[2022-10-09T23:41:21.395] [DEBUG] default - Number actor get all: 211
+[2022-10-09T23:41:21.396] [DEBUG] default - OUT - get all actor
+[2022-10-09T23:41:24.155] [DEBUG] default - IN - update actor
+[2022-10-09T23:41:24.155] [DEBUG] default - actorID: 201
+[2022-10-09T23:41:24.156] [DEBUG] default - actorData: {"first_name":"TINH UPDTESTATED","last_name":"LUU"}
+[2022-10-09T23:41:24.158] [DEBUG] default - result: 0
+[2022-10-09T23:41:53.884] [INFO] default - Server listens on 3000
+[2022-10-09T23:41:56.969] [DEBUG] default - IN - update actor
+[2022-10-09T23:41:56.969] [DEBUG] default - actorID: 201
+[2022-10-09T23:41:56.970] [DEBUG] default - actorData: {"first_name":"TINH UPDTESTATED","last_name":"LUU"}
+[2022-10-09T23:41:56.976] [DEBUG] default - result: 0
+[2022-10-09T23:42:00.845] [DEBUG] default - IN - get all actor
+[2022-10-09T23:42:00.854] [DEBUG] default - Number actor get all: 211
+[2022-10-09T23:42:00.854] [DEBUG] default - OUT - get all actor
+[2022-10-09T23:52:39.465] [DEBUG] default - App listening on port 3000
+[2022-10-09T23:52:43.473] [DEBUG] default - IN - get all actor
+[2022-10-09T23:52:43.486] [DEBUG] default - Number actor get all: 211
+[2022-10-09T23:52:43.487] [DEBUG] default - OUT - get all actor
+[2022-10-09T23:52:44.452] [DEBUG] default - IN - get all actor
+[2022-10-09T23:52:44.456] [DEBUG] default - Number actor get all: 211
+[2022-10-09T23:52:44.457] [DEBUG] default - OUT - get all actor
+[2022-10-10T00:00:07.533] [DEBUG] default - App listening on port 3000
+[2022-10-10T00:00:17.270] [DEBUG] default - IN - get all actor
+[2022-10-10T00:00:17.281] [DEBUG] default - Number actor get all: 211
+[2022-10-10T00:00:17.282] [DEBUG] default - OUT - get all actor
+[2022-10-10T00:00:18.184] [DEBUG] default - IN - get all actor
+[2022-10-10T00:00:18.187] [DEBUG] default - Number actor get all: 211
+[2022-10-10T00:00:18.188] [DEBUG] default - OUT - get all actor
+[2022-10-10T00:00:32.081] [DEBUG] default - App listening on port 3000
+[2022-10-10T00:00:34.629] [DEBUG] default - IN - get all actor
+[2022-10-10T00:00:34.640] [DEBUG] default - Number actor get all: 211
+[2022-10-10T00:00:34.641] [DEBUG] default - OUT - get all actor
+[2022-10-10T00:00:35.618] [DEBUG] default - IN - get all actor
+[2022-10-10T00:00:35.621] [DEBUG] default - Number actor get all: 211
+[2022-10-10T00:00:35.623] [DEBUG] default - OUT - get all actor
+[2022-10-10T00:00:36.594] [DEBUG] default - IN - get all actor
+[2022-10-10T00:00:36.597] [DEBUG] default - Number actor get all: 211
+[2022-10-10T00:00:36.597] [DEBUG] default - OUT - get all actor
+[2022-10-10T00:00:39.399] [DEBUG] default - IN - add new actor
+[2022-10-10T00:00:39.399] [DEBUG] default - actorData: {"first_name":"TINH","last_name":"LUU"}
+[2022-10-10T00:00:39.406] [DEBUG] default - OUT - actorInserted:  [{"actor_id":215,"first_name":"TINH","last_name":"LUU","last_update":"2022-10-09T17:00:39.000Z"}]
+[2022-10-10T00:00:40.266] [DEBUG] default - IN - add new actor
+[2022-10-10T00:00:40.266] [DEBUG] default - actorData: {"first_name":"TINH","last_name":"LUU"}
+[2022-10-10T00:00:40.273] [DEBUG] default - OUT - actorInserted:  [{"actor_id":216,"first_name":"TINH","last_name":"LUU","last_update":"2022-10-09T17:00:40.000Z"}]
+[2022-10-10T00:01:31.390] [DEBUG] default - App listening on port 3000
+[2022-10-10T00:01:36.698] [DEBUG] default - IN - add new actor
+[2022-10-10T00:01:36.699] [DEBUG] default - actorData: {"first_name":"TINH","last_name":"LUU"}
+[2022-10-10T00:01:36.712] [DEBUG] default - OUT - actorInserted:  [{"actor_id":217,"first_name":"TINH","last_name":"LUU","last_update":"2022-10-09T17:01:36.000Z"}]
+[2022-10-10T00:01:40.186] [DEBUG] default - IN - get all films
+[2022-10-10T00:01:40.225] [DEBUG] default - Number films get all: undefined
+[2022-10-10T00:01:40.226] [DEBUG] default - OUT - get all actor
+[2022-10-10T00:01:42.914] [DEBUG] default - IN - add new film
+[2022-10-10T00:01:42.915] [DEBUG] default - filmData: {"title":"ACADEMY DINOSAUR TEST","description":"A Epic Drama of a Feminist And a Mad Scientist who must Battle a Teacher in The Canadian Rockies","release_year":2006,"language_id":1,"original_language_id":1}
+[2022-10-10T00:01:42.928] [DEBUG] default - OUT - result 1007
+[2022-10-10T00:03:12.065] [DEBUG] default - App listening on port 3000
+[2022-10-10T00:03:15.078] [DEBUG] default - IN - add new film
+[2022-10-10T00:03:15.078] [DEBUG] default - filmData: {"title":"ACADEMY DINOSAUR TEST","description":"A Epic Drama of a Feminist And a Mad Scientist who must Battle a Teacher in The Canadian Rockies","release_year":2006,"language_id":1,"original_language_id":1}
+[2022-10-10T00:03:15.088] [DEBUG] default - OUT - result 1008
+[2022-10-10T00:04:01.597] [DEBUG] default - App listening on port 3000
+[2022-10-10T00:04:04.938] [DEBUG] default - IN - add new film
+[2022-10-10T00:04:04.938] [DEBUG] default - filmData: {"title":"ACADEMY DINOSAUR TEST","description":"A Epic Drama of a Feminist And a Mad Scientist who must Battle a Teacher in The Canadian Rockies","release_year":2006,"language_id":1,"original_language_id":1}
+[2022-10-10T00:04:04.949] [DEBUG] default - OUT - result 1009
+[2022-10-10T00:04:06.143] [DEBUG] default - IN - add new film
+[2022-10-10T00:04:06.144] [DEBUG] default - filmData: {"title":"ACADEMY DINOSAUR TEST","description":"A Epic Drama of a Feminist And a Mad Scientist who must Battle a Teacher in The Canadian Rockies","release_year":2006,"language_id":1,"original_language_id":1}
+[2022-10-10T00:04:06.150] [DEBUG] default - OUT - result 1010
+[2022-10-10T00:09:02.759] [DEBUG] default - App listening on port 3000
+[2022-10-10T00:09:10.693] [DEBUG] default - IN - add new film
+[2022-10-10T00:09:10.694] [DEBUG] default - filmData: {"title":"ACADEMY DINOSAUR TEST","description":"A Epic Drama of a Feminist And a Mad Scientist who must Battle a Teacher in The Canadian Rockies","release_year":2006,"language_id":1,"original_language_id":1}
+[2022-10-10T00:09:10.705] [DEBUG] default - OUT - result 1011
+[2022-10-10T00:09:11.787] [DEBUG] default - IN - add new film
+[2022-10-10T00:09:11.789] [DEBUG] default - filmData: {"title":"ACADEMY DINOSAUR TEST","description":"A Epic Drama of a Feminist And a Mad Scientist who must Battle a Teacher in The Canadian Rockies","release_year":2006,"language_id":1,"original_language_id":1}
+[2022-10-10T00:09:11.800] [DEBUG] default - OUT - result 1012
+[2022-10-10T00:09:12.459] [DEBUG] default - IN - add new film
+[2022-10-10T00:09:12.459] [DEBUG] default - filmData: {"title":"ACADEMY DINOSAUR TEST","description":"A Epic Drama of a Feminist And a Mad Scientist who must Battle a Teacher in The Canadian Rockies","release_year":2006,"language_id":1,"original_language_id":1}
+[2022-10-10T00:09:12.471] [DEBUG] default - OUT - result 1013
+[2022-10-10T00:09:37.443] [DEBUG] default - App listening on port 3000
+[2022-10-10T00:09:49.807] [DEBUG] default - IN - add new film
+[2022-10-10T00:09:49.807] [DEBUG] default - filmData: {"title":"ACADEMY DINOSAUR TEST","description":"A Epic Drama of a Feminist And a Mad Scientist who must Battle a Teacher in The Canadian Rockies","release_year":2006,"language_id":1,"original_language_id":1}
+[2022-10-10T00:09:49.816] [DEBUG] default - OUT - result 1014
+[2022-10-10T00:09:50.914] [DEBUG] default - IN - add new film
+[2022-10-10T00:09:50.916] [DEBUG] default - filmData: {"title":"ACADEMY DINOSAUR TEST","description":"A Epic Drama of a Feminist And a Mad Scientist who must Battle a Teacher in The Canadian Rockies","release_year":2006,"language_id":1,"original_language_id":1}
+[2022-10-10T00:09:50.923] [DEBUG] default - OUT - result 1015
+[2022-10-10T00:09:51.896] [DEBUG] default - IN - add new film
+[2022-10-10T00:09:51.896] [DEBUG] default - filmData: {"title":"ACADEMY DINOSAUR TEST","description":"A Epic Drama of a Feminist And a Mad Scientist who must Battle a Teacher in The Canadian Rockies","release_year":2006,"language_id":1,"original_language_id":1}
+[2022-10-10T00:09:51.903] [DEBUG] default - OUT - result 1016
+[2022-10-10T00:09:54.997] [DEBUG] default - IN - get all films
+[2022-10-10T00:09:55.017] [DEBUG] default - Number films get all: undefined
+[2022-10-10T00:09:55.018] [DEBUG] default - OUT - get all actor
+[2022-10-10T00:10:02.362] [DEBUG] default - App listening on port 3000
+[2022-10-10T00:11:25.190] [DEBUG] default - App listening on port 3000
+[2022-10-10T00:11:30.826] [DEBUG] default - IN - get all films
+[2022-10-10T00:11:30.858] [DEBUG] default - Number films get all: undefined
+[2022-10-10T00:11:30.859] [DEBUG] default - OUT - get all actor
+[2022-10-10T00:11:31.927] [DEBUG] default - IN - get all films
+[2022-10-10T00:11:31.939] [DEBUG] default - Number films get all: undefined
+[2022-10-10T00:11:31.940] [DEBUG] default - OUT - get all actor
+[2022-10-10T00:13:24.928] [DEBUG] default - App listening on port 3000
+[2022-10-10T00:13:27.948] [DEBUG] default - IN - get all films
+[2022-10-10T00:13:27.967] [DEBUG] default - Number films get all: undefined
+[2022-10-10T00:13:27.967] [DEBUG] default - OUT - get all actor
+[2022-10-10T00:13:29.019] [DEBUG] default - IN - get all films
+[2022-10-10T00:13:29.034] [DEBUG] default - Number films get all: undefined
+[2022-10-10T00:13:29.035] [DEBUG] default - OUT - get all actor
+[2022-10-10T00:17:50.634] [DEBUG] default - App listening on port 3000
+[2022-10-10T00:17:54.778] [DEBUG] default - IN - get all films
+[2022-10-10T00:17:54.803] [DEBUG] default - Number films get all: undefined
+[2022-10-10T00:17:54.803] [DEBUG] default - OUT - get all actor
+[2022-10-10T00:17:55.828] [DEBUG] default - IN - get all films
+[2022-10-10T00:17:55.837] [DEBUG] default - Number films get all: undefined
+[2022-10-10T00:17:55.838] [DEBUG] default - OUT - get all actor
+[2022-10-10T00:17:56.785] [DEBUG] default - IN - get all films
+[2022-10-10T00:17:56.798] [DEBUG] default - Number films get all: undefined
+[2022-10-10T00:17:56.799] [DEBUG] default - OUT - get all actor
+[2022-10-10T00:18:07.282] [DEBUG] default - IN - add new actor
+[2022-10-10T00:18:07.282] [DEBUG] default - actorData: {"first_name":"TINH","last_name":"LUU"}
+[2022-10-10T00:18:07.292] [DEBUG] default - OUT - actorInserted:  [{"actor_id":218,"first_name":"TINH","last_name":"LUU","last_update":"2022-10-09T17:18:07.000Z"}]
+[2022-10-10T00:18:10.412] [DEBUG] default - IN - add new film
+[2022-10-10T00:18:10.413] [DEBUG] default - filmData: {"title":"ACADEMY DINOSAUR TEST","description":"A Epic Drama of a Feminist And a Mad Scientist who must Battle a Teacher in The Canadian Rockies","release_year":2006,"language_id":1,"original_language_id":1}
+[2022-10-10T00:18:10.422] [DEBUG] default - OUT - result 1017
